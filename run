@@ -1,0 +1,9 @@
+#!/bin/sh
+
+AWSSDK="aws-java-sdk-1.11.179"
+
+echo Compiling...
+javac -classpath lib/${AWSSDK}/lib/${AWSSDK}.jar:lib/${AWSSDK}/third-party/lib SimpleQueueServiceSample.java
+
+echo Running...
+java -classpath .:lib/${AWSSDK}/lib/${AWSSDK}.jar:lib/${AWSSDK}/third-party/lib/* SimpleQueueServiceSample
